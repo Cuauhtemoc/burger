@@ -1,0 +1,33 @@
+
+<div class=containter>
+    <h1>EAT DA BURGER</h1>
+    <h3>Add a burger...</h3>
+    <div class="form-group">
+        <label for="burger">Burger Name:</label>
+        <input type="text" id="burger" name="name">
+         <button id="new-burger"type="submit">Submit</button>
+    </div>
+    <div>
+        <h3>Burgers to eat...</h3>
+        <ol>
+            {{#each burger}}
+                {{#unless this.devoured}}
+                    <li>{{this.burger_name}}
+                        <button class="devour-burger"data-id={{this.id}} data-devoured=1> Devour! </button>
+                    </li>
+                {{/unless}}
+            {{/each}}
+        </ol>
+    </div>
+    <div>
+        <h3>Burgers eaten...</h3>
+        <ol>
+            {{#each burger}}
+                {{#if this.devoured}}
+                    <li>{{this.burger_name}}
+                    </li>
+                {{/if}}
+            {{/each}}
+        </ol>
+    </div>
+</div>
