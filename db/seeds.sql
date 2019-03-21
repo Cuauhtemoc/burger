@@ -1,4 +1,4 @@
-USE burgers_db;
+USE pzv2j4tvj6yjpg9y;
 
 INSERT INTO burgers (burger_name, devoured )
 VALUES("double cheese burger", true);
